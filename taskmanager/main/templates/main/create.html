@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создать таск
+{% endblock %}
+
+{% block content %}
+    <h1>Создать таск</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Используем {{ form.as_p }} для вывода полей с оберткой в параграфы -->
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock %}
